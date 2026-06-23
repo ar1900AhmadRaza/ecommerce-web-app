@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact ShopNest</title>
+  <link rel="icon" href="cart.jpg">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="logo">SHOPNEST</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="product.html">Products</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>Contact Us</h1>
+    <p>We would love to hear from you!</p>
+  </section>
+
+  <!-- Contact + Map Section -->
+  <div class="contact-wrapper">
+
+    <section class="contact-form">
+      <h2>Send us a Message</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <div class="btn-group">
+          <a href="index.html" class="btn">Back</a>
+          <button type="submit" class="btn submit">Submit</button>
+        </div>
+      </form>
+      <p id="formResponse" class="response-text"></p>
+    </section>
+
+    <section class="contact-info">
+      <h2>Our Address</h2>
+      <p>Kohinor Plaza office #18, Faisalabad</p>
+
+      <h2>Phone Number</h2>
+      <p>+92 300 8662790</p>
+
+      <h2>Email</h2>
+      <p>shopnest@.com</p>
+
+    <h2>Location</h2>
+<!-- Embedded Google Map -->
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.123456!2d73.0479!3d31.4504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919030d7f1c567b%3A0xabcdef1234567890!2sKohinor%20Plaza%2C%20Faisalabad!5e0!3m2!1sen!2s!4v1690000000000!5m2!1sen!2s"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SHOPNEST. All Rights Reserved.</p>
+    <p>Designed by The Creative Web Team</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>

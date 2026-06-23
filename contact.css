@@ -1,0 +1,162 @@
+/* Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header / Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color:#0a0a4a; /* Indigo 600 */
+  color: white;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #c7d2fe; /* Indigo 200 */
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #0a0a4a; /* Indigo 500 */
+  color: white;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner p {
+  font-size: 1.2rem;
+}
+
+/* Contact Wrapper */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1 1 300px;
+  max-width: 500px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #0a0a4a;
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.btn-group {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #0a0a4a;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0a0a4a;
+}
+
+.submit {
+  border: none;
+  cursor: pointer;
+}
+
+/* Form Response */
+.response-text {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: green;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.contact-info h2 {
+  color: #0a0a4a;
+  margin-bottom: 0.3rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+}
+
+.map-container {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #e5e7eb; /* gray-200 */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1f2937; /* gray-800 */
+  color: #9ca3af; /* gray-400 */
+  margin-top: 2rem;
+}

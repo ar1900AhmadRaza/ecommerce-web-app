@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Services</title>
+    <link rel="stylesheet" href="style.css">       <!-- Global styles -->
+    <link rel="stylesheet" href="feedback.css">    <!-- Feedback-specific styles -->
+</head>
+<body>
+
+    <!-- ---------- HEADER / NAVBAR ---------- -->
+    <header class="header">
+        <div class="logo">SHOPNEST</div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="product.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="feedback.html" class="active">Feedback</a>
+        </nav>
+    </header>
+
+    <!-- ---------- SERVICES SECTION ---------- -->
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <ul>
+            <li>24/7 Customer Support</li>
+            <li>Fast Delivery</li>
+            <li>High Quality Products</li>
+            <li>Easy Return Policy</li>
+            <li>Payment Options: Cash on Delivery, Credit/Debit, Online Transfer</li>
+            <li>10% Discount on purchasing more than 3 items</li>
+        </ul>
+    </section>
+
+    <!-- ---------- FEEDBACK FORM ---------- -->
+    <section class="feedback-section">
+        <h2>Give Your Feedback</h2>
+
+        <form id="feedbackForm" class="feedback-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="rating">Rate Our Service:</label>
+            <select id="rating">
+                <option>Excellent</option>
+                <option>Good</option>
+                <option>Average</option>
+                <option>Poor</option>
+            </select>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" rows="5"></textarea>
+
+            <div class="btn-group">
+                <a href="index.html" class="btn">Back</a>
+                <button type="button" class="btn submit" onclick="submitFeedback()">Submit</button>
+            </div>
+        </form>
+
+        <!-- Thank You Message -->
+        <div id="thankYouMessage" class="thank-you"></div>
+    </section>
+
+    <!-- ---------- FOOTER ---------- -->
+    <footer class="footer">
+        &copy; 2025 SHOPNEST. All Rights Reserved.
+    </footer>
+
+    <!-- ---------- SCRIPT ---------- -->
+    <script>
+    function submitFeedback() {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let rating = document.getElementById("rating").value;
+        let message = document.getElementById("message").value.trim();
+        const thankYouDiv = document.getElementById("thankYouMessage");
+
+        if (!name || !email || !message) {
+            alert("Please fill all required fields!");
+            return;
+        }
+
+        // Show thank you message
+        thankYouDiv.innerHTML = `<p>Thank you, <strong>${name}</strong>! Your feedback has been submitted.</p>`;
+        thankYouDiv.style.display = "block";
+
+        // Reset form
+        document.getElementById("feedbackForm").reset();
+    }
+
+    // Optional: fade-in effect for sections
+    const fadeElements = document.querySelectorAll(".services-section, .feedback-section");
+
+    fadeElements.forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        el.style.transition = "all 0.7s ease-out";
+    });
+
+    function fadeInOnScroll() {
+        const windowHeight = window.innerHeight - 100;
+        fadeElements.forEach(el => {
+            const position = el.getBoundingClientRect().top;
+            if (position < windowHeight) {
+                el.style.opacity = "1";
+                el.style.transform = "translateY(0)";
+            }
+        });
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll();
+    </script>
+</body>
+</html>

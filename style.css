@@ -1,0 +1,269 @@
+/* ---------- GENERAL STYLES ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #eef1ff;
+    color: #222;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ------------------ HEADER / NAVBAR ------------------ */
+header {
+    width: 100%;
+    background: #0a0a4a;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 17px;
+    padding-bottom: 5px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    bottom: -2px;
+    background: #ffdf5d;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #ffdf5d;
+}
+
+/* ------------------ HERO SLIDER ------------------ */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero .slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #0a0a4a;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content button {
+    padding: 12px 25px;
+    background: #ff9d00;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-content button:hover {
+    background: #e68a00;
+}
+
+/* ------------------ CATEGORIES ------------------ */
+.categories {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #0a0a4a;
+}
+
+.categories .grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.categories .card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.categories .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.categories .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.categories .card h3 {
+    padding: 15px 0;
+    font-size: 20px;
+    color: #0a0a4a;
+}
+
+/* ------------------ WHY CHOOSE US ------------------ */
+.why {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.why h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #0a0a4a;
+}
+
+.why ul {
+    list-style-type: none;
+}
+
+.why li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* ------------------ INSTAGRAM ------------------ */
+.insta {
+    background: #f5f5f5;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.insta h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #0a0a4a;
+}
+
+.insta p {
+    margin-bottom: 20px;
+}
+
+.insta .insta-btn {
+    padding: 10px 20px;
+    background: #0a0a4a;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.insta .insta-btn:hover {
+    background: #15157a;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+    background: #0a0a4a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 900px) {
+    .categories .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .categories .card {
+        width: 80%;
+    }
+}  its its css 

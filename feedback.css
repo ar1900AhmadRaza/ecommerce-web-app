@@ -1,0 +1,149 @@
+/* ---------- GLOBAL STYLING ---------- */
+body {
+    font-family: "Poppins", sans-serif;
+    background: #eef1ff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Page fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1, h2 {
+    text-align: center;
+    color: #0a0a4a;
+    margin-bottom: 20px;
+}
+
+/* ---------- SERVICES SECTION ---------- */
+.services-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.services-section ul {
+    list-style: square;
+    padding-left: 40px;
+}
+
+.services-section li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* ---------- FEEDBACK FORM ---------- */
+.feedback-section {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-form {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.feedback-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.feedback-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover,
+.feedback-form select:hover {
+    border-color: #8686ff;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus,
+.feedback-form select:focus {
+    border-color: #0a0a4a;
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* Buttons */
+.btn-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn, .feedback-form button {
+    display: inline-block;
+    padding: 10px 22px;
+    text-decoration: none;
+    background: #0a0a4a;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover, .feedback-form button:hover {
+    background: #15157a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Thank You Message */
+.thank-you {
+    margin-top: 15px;
+    color: #0a0a4a;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .services-section, .feedback-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

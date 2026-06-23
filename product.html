@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPNEST - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="icon" href="cart.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">SHOPNEST</div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="product.html" class="active">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-section">
+            <h1>Our Products</h1>
+
+            <div class="container">
+                <!-- SIDEBAR -->
+                <aside class="aside">
+                    <h2>Categories</h2>
+                    <div class="shop_categories">
+                        <a href="#" class="categories_link active" data-filter="all">All Products</a>
+                        <a href="#" class="categories_link" data-filter="fashion">Fashion</a>
+                        <a href="#" class="categories_link" data-filter="shoes">Shoes</a>
+                        <a href="#" class="categories_link" data-filter="electronics">Electronics</a>
+                        <a href="#" class="categories_link" data-filter="woman">Women</a>
+                        <a href="#" class="categories_link" data-filter="man">Men</a>
+                    </div>
+                </aside>
+
+                <!-- PRODUCTS GRID -->
+                <div class="products">
+                    <div class="content">
+
+                        <!-- Women's Denim Set -->
+                        <div class="product-card" data-category="fashion woman">
+                            <div class="card-img">
+                                <img src="denim_women.jfif" alt="Women's Denim" class="product-img">
+                                <div class="addToCart"><ion-icon name="cart-outline"></ion-icon></div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="product-name">Women's Oversized Denim Set</h3>
+                                <p class="product-price">$129.99</p>
+                                <button class="more-info-btn">More Info</button>
+                                <p class="product-description">Trendy light-wash oversized jacket + wide-leg jeans. Perfect streetwear look.</p>
+                            </div>
+                        </div>
+
+                        <!-- Men's Denim Jacket -->
+                        <div class="product-card" data-category="fashion man">
+                            <div class="card-img">
+                                <img src="denim_men.jfif" alt="Men's Denim Jacket" class="product-img">
+                                <div class="addToCart"><ion-icon name="cart-outline"></ion-icon></div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="product-name">Men's Trucker Denim Jacket</h3>
+                                <p class="product-price">$99.99</p>
+                                <button class="more-info-btn">More Info</button>
+                                <p class="product-description">Classic medium-wash trucker jacket. Timeless style.</p>
+                            </div>
+                        </div>
+
+                        <!-- Men's Jeans -->
+                        <div class="product-card" data-category="fashion man">
+                            <div class="card-img">
+                                <img src="denimpants_men.jfif" alt="Men's Jeans" class="product-img">
+                                <div class="addToCart"><ion-icon name="cart-outline"></ion-icon></div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="product-name">Men's Relaxed Fit Jeans</h3>
+                                <p class="product-price">$79.99</p>
+                                <button class="more-info-btn">More Info</button>
+                                <p class="product-description">Light wash relaxed fit – comfortable all-day wear.</p>
+                            </div>
+                        </div>
+
+                        <!-- Women's Flare Jeans -->
+                        <div class="product-card" data-category="fashion woman">
+                            <div class="card-img">
+                                <img src="denimpants_women.jfif" alt="Women's Flare Jeans" class="product-img">
+                                <div class="addToCart"><ion-icon name="cart-outline"></ion-icon></div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="product-name">Women's High-Rise Flare Jeans</h3>
+                                <p class="product-price">$89.99</p>
+                                <button class="more-info-btn">More Info</button>
+                                <p class="product-description">Retro flare with stretch. Super flattering fit.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pink Sneakers -->
+                        <div class="product-card" data-category="shoes">
+                            <div class="card-img">
+                                <img src="women_shoes.jfif" alt="Pink Sneakers" class="product-img">
+                                <div class="addToCart"><ion-icon name="cart-outline"></ion-icon></div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="product-name">Pink Lightweight Sneakers</h3>
+                                <p class="product-price">$64.99</p>
+                                <button class="more-info-btn">More Info</button>
+                                <p class="product-description">Breathable mesh, perfect for walking or casual wear.</p>
+                            </div>
+                        </div>
+
+                        <!-- Gray/Orange Sneakers -->
+                        <div class="product-card" data-category="shoes">
+                            <div class="card-img">
+                                <img src="men_shoes.jfif" alt="Performance Sneakers" class="product-img">
+                                <div class="addToCart"><ion-icon name="cart-outline"></ion-icon></div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="product-name">Performance Running Sneakers</h3>
+                                <p class="product-price">$89.99</p>
+                                <button class="more-info-btn">More Info</button>
+                                <p class="product-description">Great cushioning and support for running or gym.</p>
+                            </div>
+                        </div>
+
+                        <!-- Sport Watch -->
+                        <div class="product-card" data-category="electronics">
+                            <div class="card-img">
+                                <img src="men_watch.jfif" alt="Sport Watch" class="product-img">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="product-name">Dual Display Sport Watch</h3>
+                                <p class="product-price">$54.99</p>
+                                <button class="more-info-btn">More Info</button>
+                                <p class="product-description">50M water resistant, alarm, stopwatch, backlight.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pink Watch -->
+                        <div class="product-card" data-category="electronics">
+                            <div class="card-img">
+                                <img src="women_watch.jfif" alt="Pink Watch" class="product-img">
+                                <div class="addToCart"><ion-icon name="cart-outline"></ion-icon></div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="product-name">Minimal Pink Digital Watch</h3>
+                                <p class="product-price">$39.99</p>
+                                <button class="more-info-btn">More Info</button>
+                                <p class="product-description">Lightweight, stylish, daily alarms & timer.</p>
+                            </div>
+                        </div>
+
+                        <!-- Hair Dryer -->
+                        <div class="product-card" data-category="electronics">
+                            <div class="card-img">
+                                <img src="hairdryer_neutral.jfif" alt="Hair Dryer" class="product-img">
+                                <div class="addToCart"><ion-icon name="cart-outline"></ion-icon></div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="product-name">Professional Ionic Hair Dryer</h3>
+                                <p class="product-price">$119.99</p>
+                                <button class="more-info-btn">More Info</button>
+                                <p class="product-description">2000W fast drying, ionic tech + diffuser included.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 SHOPNEST. All Rights Reserved.</p>
+        <p>Designed by The Creative Web Team</p>
+    </footer>
+
+    <script src="product.js"></script>
+</body>
+</html>
